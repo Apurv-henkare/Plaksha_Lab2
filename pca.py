@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 
 def pca_via_svd(data, n_components):
@@ -42,4 +43,5 @@ def plot_pca_reconstruction(X_original, projected, pc, mean):
     plt.axis('equal')
     plt.legend()
     plt.title("PCA Projection")
+    plt.savefig('plots/pca.png', bbox_inches='tight')
     plt.show()

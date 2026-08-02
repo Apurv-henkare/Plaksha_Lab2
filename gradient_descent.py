@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 # The original function we are trying to minimize: f(x) = (x - 3)^2
 def f_1d(x):
@@ -71,6 +72,7 @@ def plot_gradient_descent(a,b,c):
 
     # We limit the y-axis so the exploding LR=1.05 doesn't zoom the graph out too far
     plt.ylim(-2, 20)
+    plt.savefig('plots/gradient_descent.png', bbox_inches='tight')
     plt.show()
 
 
@@ -99,6 +101,7 @@ def plot_loss_function(a,b,c):
     plt.ylabel("Loss (Linear Scale)")
     plt.legend()
 
+    plt.savefig('plots/Loss_function.png', bbox_inches='tight')
     # Look, no log scale!
     plt.show()
 
@@ -124,4 +127,5 @@ def plot_2d_gradient_descent(history_2d, lr, steps):
     plt.xlabel("x-axis")
     plt.ylabel("y-axis")
     plt.legend()
+    plt.savefig('plots/2D_gradient_descent.png', bbox_inches='tight')
     plt.show()

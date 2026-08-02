@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 
 def cosine_similarity(a, b):
@@ -90,4 +91,5 @@ def plot_knn_prediction(X_train, y_train,k,query):
 
     plt.title(f"KNN Decision Boundary (k={k})")
     plt.legend(loc='best')
+    plt.savefig('plots/knn_predict.png', bbox_inches='tight')
     plt.show()
